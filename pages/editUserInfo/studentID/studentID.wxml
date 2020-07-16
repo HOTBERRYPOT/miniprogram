@@ -1,0 +1,3 @@
+<!--pages/editUserInfo/number/number.wxml-->
+<input type="number" value="{{studentID}}" placeholder="  请输入学号" bindinput="handleText"/>
+<button bindtap="handleBtn">设置</button>

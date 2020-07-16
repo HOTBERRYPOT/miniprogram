@@ -1,0 +1,5 @@
+/* pages/editUserInfo/head/head.wxss */
+
+image {margin-top: 60px; display: flex;flex-direction: column; align-items: center; }
+
+button{height: auto;width: max-content;margin-top: 40px;background-color:#ddece8;}

@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<view>
+     <view>
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+            <!-- 搜索框 -->
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="想找的活动看这里呀~"/>
+                </view>
+            </view>
+            <!-- 搜索按钮,调用搜索查询方法 -->
+            <view class="weui-search-bar__cancel-btn" bindtap='方法名a'>搜索</view>
+        </view>
+    </view>
+ </view>
+
+<view class="index">
+  <view class="page-section page-section-spacing swiper">
+    <swiper class="index-swiper" indicator-dots="{{indicatorDots}}"
+      autoplay="{{true}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <image src="/images/swiper/1.jpg"></image> 
+        </swiper-item> 
+      </block>
+            <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <image src="/images/swiper/3.jpg"></image> 
+        </swiper-item> 
+      </block>
+    </swiper>
+  </view>
+   
+  <view class="index-tab">
+    <view class="active">最新活动</view>
+    <view>社团/组织</view>
+  
+  </view>
+
+</view>
+
+
+<view class="main-container">
+  <view class="short-card" >
+        <view><text class="title">上海大学新生杯比赛</text></view>
+        <view><text class="tag">发布于 2020年6月9日, 社团：上大xx社</text></view>
+        <view class="btn-area">
+             <button type="default" plain="true" size="mini"  bindtap="modalTap">查看详情</button>
+        </view>
+  </view>
+
+  <view class="short-card" >
+        <view><text class="title">上海大学学生会招新啦</text></view>
+        <view><text class="tag">发布于 2020年6月9日, 组织：上大xxx</text></view>
+        <view class="btn-area">
+           <button type="default" plain="true" size="mini"  bindtap="modalTap">查看详情</button>
+        </view>
+  </view>
+</view>

@@ -1,0 +1,63 @@
+<!--pages/activity-find/activity-find.wxml-->
+<!--index.wxml-->
+<view>
+     <view>
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+            <!-- 搜索框 -->
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="想找的活动看这里呀~"/>
+                </view>
+            </view>
+            <!-- 搜索按钮,调用搜索查询方法 -->
+            <view class="weui-search-bar__cancel-btn" bindtap='方法名a'>搜索</view>
+        </view>
+    </view>
+ </view>
+
+<view class="index">
+  <view class="page-section page-section-spacing swiper">
+    <swiper class="index-swiper" indicator-dots="{{indicatorDots}}"
+      autoplay="{{true}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <image src="/images/swiper/2.jfif"></image> 
+        </swiper-item> 
+      </block>
+            <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <image src="/images/swiper/3.jpg"></image> 
+        </swiper-item> 
+      </block>
+    </swiper>
+  </view>
+   
+  <view class="index-tab">
+    <view class="active">最近活动</view>
+  </view>
+
+</view>
+
+<view class="main-container">
+
+    <view class="short-card" >
+        <view class="tagtitle">上海大学学生会 今日 8:100</view>
+        <view><text class="title">清洁小卫士招募啦</text></view>
+        <view><text class="tag">为维护校园清洁，保护环境卫生，呵护同学健康，上海大学今日起至20日招募清洁小卫士20名，要求如下...</text></view>
+        <view class="btn-area">
+             <button type="default" plain="true" size="mini"  bindtap="modalTap">查看详情</button>
+        </view>
+    </view>
+
+    <view class="short-card" >
+        <view class="tagtitle">上海大学管理学院 今日 9:00</view>
+        <view><text class="title">三创赛比赛报名啦</text></view>
+        <view><text class="tag">第xx届三创大赛今天起开始报名，活动内容如下：...
+        </text></view>
+        <view class="btn-area">
+             <button type="default" plain="true" size="mini"  bindtap="modalTap">查看详情</button>
+        </view>
+    </view>
+</view>
+

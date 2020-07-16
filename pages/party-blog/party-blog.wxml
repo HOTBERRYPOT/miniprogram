@@ -1,0 +1,46 @@
+<!--pages/party-blog/party-blog.wxml-->
+
+<view class="index-list">
+     <view class="main-container">
+      <view class="short-card" >
+       <view><text class="tag">     
+        上海大学学生会
+        </text></view>
+        <view class="btn-area">
+             <button type="default" plain="true" size="mini"  bindtap="modalTap">进入主页</button>
+        </view>
+      </view>
+    </view>
+    <view class="main-container">
+      <view class="short-card" >
+       <view><text class="tag">     
+        上海大学MCs主持人社
+        </text></view>
+        <view class="btn-area">
+             <button url="./blog-index" type="default" plain="true" size="mini"  bindtap="modalTap">进入主页</button>
+        </view>
+      </view>
+    </view>
+    <view class="main-container">
+      <view class="short-card" >
+       <view><text class="tag">     
+        上海大学数学建模社
+        </text></view>
+        <view class="btn-area">
+             <button type="default" plain="true" size="mini"  bindtap="modalTap">进入主页</button>
+        </view>
+      </view>
+    </view>
+    <view class="main-container">
+      <view class="short-card" >
+       <view><text class="tag">     
+        上海大学自行车社
+        </text></view>
+        <view class="btn-area">
+             <button type="default" plain="true" size="mini"  bindtap="modalTap">进入主页</button>
+        </view>
+      </view>
+    </view>
+</view> 
+
+  

@@ -1,0 +1,9 @@
+<!--pages/editUserInfo/head/head.wxml-->
+<view class=".head">
+  <image src="{{userPhoto}}"/>
+</view>
+<button bindtap="handleBtn">自定义头像</button>
+<button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">使用微信头像</button> 
+
+
+
