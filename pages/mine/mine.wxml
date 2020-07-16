@@ -1,0 +1,31 @@
+<!--pages/mine.wxml-->
+<view class="user">
+  <view class="user-info">
+    <image src="{{userPhoto}}"></image>
+    <text wx:if="{{logged}}"> 欢迎：   {{nickName}}</text>
+    <button wx:else disabled="{{disabled}}"open-type="getUserInfo" 
+    bindgetuserinfo="bindGetUserInfo">微信授权登录</button> 
+  </view>
+  <view wx:if="{{logged}}" class="user-list">
+    <navigator url="../editUserInfo/editUserInfo" open-type="navigate">
+      <view class="user-list-item">
+       <text>编辑个人信息</text>
+       <text class="iconfont "></text>
+      </view>
+    </navigator>
+    <navigator url="../friendlist/friendlist" open-type="navigate">
+      <view class="user-list-item">
+       <text>查看好友列表</text>
+       <text class="iconfont "></text>
+      </view>
+    </navigator>
+    <navigator url="../detail/detail" open-type="navigate">
+      <view class="user-list-item">
+       <text>个人主页</text>
+       <text class="iconfont "></text>
+      </view>
+    </navigator>
+  </view>
+
+
+</view>
