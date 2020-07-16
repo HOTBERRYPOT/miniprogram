@@ -1,0 +1,87 @@
+<!--index.wxml-->
+<view class="container container-gray">
+<form bindsubmit = 'submit'>
+	<view class="group">
+		<view class="group-header">基本信息</view>
+		<view class="group-body">
+			<view class="input-list">
+				<view class="input-item">
+					<text class="input-item-label">姓名</text>
+					<view class="input-item-content">
+						<input type="text" name = 'Name' placeholder="请输入姓名" value = '{{Name}}'></input>
+					</view>
+				</view>
+        <view class="input-item">
+					<text class="input-item-label">性别</text>
+					<picker class="input-item-content" bindchange="bindPickerChange" data-pickername="sex" value="{{sexindex}}" range="{{sexarr}}" mode="selector">{{sexarr[sexindex]}}
+					</picker>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">班级</text>
+					<view class="input-item-content">
+						<input type="text" name = "Class" placeholder="例：19级分流智科2班" value = '{{Class}}'></input>
+					</view>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">出生年月</text>
+					<view class="input-item-content">
+						<input type="text" name = "Birthday" placeholder="例：2001年2月" value = '{{Birthday}}'></input>
+					</view>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">手机号</text>
+					<view class="input-item-content">
+						<input type="text" name = "Phone" placeholder="请输入手机号" value = '{{Phone}}'></input>
+					</view>
+				</view>
+				<view class="input-item input-item-full">
+					<text class="input-item-label">特长</text>
+					<textarea name = "Speciality" placeholder="可输入50字" maxlength="50" value = '{{Speciality}}' ></textarea>
+				</view>
+				<view class="group-header">上传标准证件照一张</view>
+			<view class="group-body">
+				<view class="img-upload">
+					<view class="img-add" bindtap="chooseImage"></view>
+					<view class="img-item" bindlongtap="editImage" wx:for="{{uploadimgs}}" wx:key="{{index}}">
+						<icon type="clear" size="20" color="red" style="display:{{editable?'block':'none'}}" bindtap="deleteImg" data-index="{{index}}"/>
+						<image src="{{item}}" mode="aspectFill"></image>
+					</view>
+				</view>
+			</view>
+			</view>
+		</view>
+		<view class="group-header">应聘部门</view>
+		<view class="group-body">
+			<view class="input-list">
+				<view class="input-item">
+					<text class="input-item-label">第一志愿</text>
+					<picker class="input-item-content" bindchange="bindPickerChange" data-pickername="job1" value="{{job1index}}" range="{{job1arr}}" mode="selector">{{job1arr[job1index]}}
+					</picker>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">第二志愿</text>
+					<picker class="input-item-content" bindchange="bindPickerChange" data-pickername="job2" value="{{job2index}}" range="{{job2arr}}" mode="selector">{{job2arr[job2index]}}
+					</picker>
+				</view>
+			</view>
+		</view>
+		<view class="group-header">个人经历（社会实践/所获荣誉）</view>
+		<view class="group-body">
+			<textarea name = "Experience" placeholder="请输入个人经历（社会实践/所获荣誉)" value = '{{Experience}}'></textarea>
+		</view>
+		<view class="group-header">申请理由</view>
+		<view class="group-body">
+			<textarea name = "Reason" placeholder="请输入申请理由" value = '{{Reason}}'></textarea>
+		</view> 
+	</view>
+  <!-- <form bindsubmit='res'> -->
+  <view class = "row">
+    <view class="btn-save">
+      <button class="btn-block btn-orange" bindtap="applysave">保存</button>
+    </view>
+    <view class="btn-submit">
+      <button form-type = 'submit' type = 'primary' class="btn-block btn-orange" bindtap="applySubmit">提交</button>
+    </view>
+  </view>
+  </form>
+</view>

@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/activity/activity",
+    "pages/mine/mine",
+    "pages/editUserInfo/editUserInfo",
+    "pages/friendlist/friendlist",
+    "pages/detail/detail",
+    "pages/editUserInfo/head/head",
+    "pages/editUserInfo/name/name",
+    "pages/editUserInfo/studentID/studentID",
+    "pages/editUserInfo/phone/phone",
+    "pages/editUserInfo/location/location",
+    "pages/party-blog/blog-index/blog-index"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "text": "报名",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tabbar/home.png",
+        "selectedIconPath": "images/tabbar/home1.png"
+      },
+      {
+        "text": "发现",
+        "pagePath": "pages/activity/activity",
+        "iconPath": "images/tabbar/activity.png",
+        "selectedIconPath": "images/tabbar/activity1.png"
+      },
+      {
+        "text": "管理",
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/tabbar/mine.png",
+        "selectedIconPath": "images/tabbar/mine1.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#8CC7B5",
+    "navigationBarTitleText": "校园一点览",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

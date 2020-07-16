@@ -1,0 +1,12 @@
+
+<view class="party-container">
+    <!-- 分类导航 -->
+  <view class="nav-block wrap">
+    <view wx:for="{{navItems}}">
+      <view class="wrap-item ">  
+        <navigator class="act" url="../{{item.url}}/{{item.url}}" hover-class="navigator-hover">{{item.name}}</navigator>
+      </view>
+   </view>
+  </view>
+</view>
+
