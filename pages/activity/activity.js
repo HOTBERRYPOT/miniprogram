@@ -24,12 +24,12 @@ Page({
       },
       {
         name: '志管部',
-        url: 'party-blog',
+        url: 'party-volun',
         isSplot: true
       },
       {
         name: '信息部',
-        url: 'party-blog',
+        url: 'party-info',
         isSplot: true
       },
       {

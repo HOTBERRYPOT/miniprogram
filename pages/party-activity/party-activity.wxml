@@ -1,26 +1,24 @@
 
 <view class='item container'>
-   <view class="cell_is free">
-     <view class='title'> 活动发布 </view>
-   </view>
+   <text class="title">权益中心</text>
 
    <view class='freeart' >
-     <view class="tagtitle">活动摘要</view>
-      <textarea placeholder="活动摘要(10-200字)" maxlength="200" placeholder-class="placeholder" class='multi_in' bindinput='freeContentInput' />
+     <view class="tagtitle">部门职能</view>
+      <textarea placeholder="说说你们平时都需要干些啥，做了啥活动" maxlength="200" placeholder-class="placeholder" class='multi_in' bindinput='freeContentInput' value="{{business}}" />
    </view>
 
    <view class='contentart'>
-     <view class="tagtitle">活动详情</view>
-     <textarea placeholder="输入活动内容" maxlength="-1" placeholder-class="placeholder" class='multi_in' bindinput='contentInput' />
+     <view class="tagtitle">所需人才</view>
+     <textarea placeholder="输入招新所需人才的基本概况" maxlength="-1" placeholder-class="placeholder" class='multi_in' bindinput='contentInput' value="{{person}}" />
    </view>
 
-   <view class='picture'>
-      <view class='emptyadd' bindtap='showpictures'></view>
-      <view class='tagtitle addpic' >添加相关图片</view>
+  <view class='contentart'>
+     <view class="tagtitle">对新生的话</view>
+     <textarea placeholder="说点好听的哄骗下大家吧" maxlength="-1" placeholder-class="placeholder" class='multi_in' bindinput='contentInput' value="{{word}}" />
    </view>
 
    <view class='btns'>
-    <button class='submit' hover-class="press_sub" bindtap="submit">发表文章</button>
+    <button class='submit' hover-class="press_sub" bindtap="submit">保存发布</button>
   </view>
 </view>
 

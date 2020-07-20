@@ -1,4 +1,4 @@
-/* pages/party-join/party-join.wxss */
+/* pages/party-info/party-info.wxss */
 .countainer
 {
   background-color: #ffffff;

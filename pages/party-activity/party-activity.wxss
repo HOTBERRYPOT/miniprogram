@@ -11,16 +11,16 @@
   margin-bottom: 20rpx;
   font-size: 70rpx;
   border-bottom: 2rpx solid #8CC7B5;
-  font-family: cursive;
+
 }
 
 .tagtitle{
-    background-color: #8CC7B5;
+    background-color: rgb(186, 232, 219);
     padding: 15rpx;
     color: #020101;
     font-size: 40rpx;
-    font-family: cursive;
     border-radius: 10rpx;
+    font-family: cursive;
 }
 .item{
   background-color: #fff;
@@ -29,7 +29,7 @@
 .freeart{
     padding-bottom: 10rpx;
 }
-
+.title{border: 2rpx;display: flex; justify-content: center;align-items: center;}
 .multi_in{
     border:1rpx solid #8CC7B5;
     padding: 10rpx;
