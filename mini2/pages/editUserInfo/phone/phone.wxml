@@ -1,4 +1,0 @@
-<!--pages/editUserInfo/phone/phone.wxml-->
-<input type="number" value="{{phoneNumber}}" placeholder="  请输入手机号" bindinput="handleText"/>
-<button bindtap="handleBtn">设置</button>
-

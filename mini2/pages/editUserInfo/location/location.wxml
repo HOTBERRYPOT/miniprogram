@@ -1,5 +1,0 @@
-<!--pages/editUserInfo/location/location.wxml-->
-<view>
-  <text>位置共享： </text>
-  <switch checked="{{isLocation}}}" bindchange="switchChange"/>
-</view>

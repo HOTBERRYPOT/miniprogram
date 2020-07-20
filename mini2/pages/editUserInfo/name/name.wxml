@@ -1,4 +1,0 @@
-<!--pages/editUserInfo/name/name.wxml-->
-<input type="text" value="{{nickName}}" placeholder="  输入自定义昵称" bindinput="handleText"/>
-<button bindtap="handleBtn">自定义昵称</button>
-<button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">使用微信昵称</button> 

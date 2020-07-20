@@ -1,4 +1,0 @@
-/* pages/editUserInfo/number/number.wxss */
-input{border:1px #acf1de solid;height: 40px;margin-top: 50px;
-  display: flex;margin-right: 20px;margin-left: 20px;}
- button{height: auto;width: max-content;margin-top: 30px;background-color:#ddece8;}
