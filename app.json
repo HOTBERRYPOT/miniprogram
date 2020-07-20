@@ -16,7 +16,7 @@
   "tabBar": {
     "list": [
       {
-        "text": "报名",
+        "text": "活动",
         "pagePath": "pages/index/index",
         "iconPath": "images/tabbar/home.png",
         "selectedIconPath": "images/tabbar/home1.png"

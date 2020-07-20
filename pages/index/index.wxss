@@ -322,3 +322,67 @@ radio-group label.checked:before{
 	right: -12rpx;
 	top: -12rpx;
 }
+.container2{
+  width: 100%;
+  text-align: center;
+}
+.view-text{
+	margin-top: 150rpx;
+	line-height: 50rpx;
+	height: 50rpx;
+}
+
+.img{
+	margin-top: 350rpx;
+	margin-left: 222rpx;
+	width: 300rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+/* 管理员 */
+.admin-list{
+	padding: 0 20rpx;
+}
+.admin-item{
+	display: flex;
+	padding: 20rpx 0; 
+	border-bottom: 1rpx solid #e8e8e8;
+}
+.admin-img{
+	width: 220rpx;
+	height: 156rpx;
+}
+.admin-item image{
+	width: 220rpx;
+	height: 156rpx;
+}
+.admin-text{
+	flex: 1;
+	margin-left: 20rpx;
+	width: 100%;
+}
+.admin-text .admin-tite{
+	color: #333;
+	width: 100%;
+	font-size: 34rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.admin-tags{
+	margin: 6rpx 0;
+}
+.admin-tags text{
+	padding: 6rpx 16rpx;
+	border: 1rpx solid #f7982a;
+	line-height: 1;
+	color: #f7982a;
+	font-size: 28rpx;
+	border-radius: 4rpx;
+	margin-right: 10rpx;
+	margin-bottom: 10rpx;
+	white-space: nowrap;
+}
