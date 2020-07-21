@@ -18,9 +18,16 @@
 		</scroll-view>
 	</view>
 </block>
-
-<!-- 报名者报名页面 -->
-<block wx:elif="{{!isAdministrator&&onTime}}">
+<!-- 已报名页面 -->
+<block wx:elif="{{enrolled}}">
+<view>姓名：{{Name}}</view>
+<view>性别：{{sexarr[sexindex]}}</view>
+<view>手机：{{Phone}}</view>
+<view>第一志愿：{{job1arr[job1index]}}</view>
+<view>第二志愿：{{job2arr[job2index]}}</view>
+</block>
+<!-- 报名表页面 -->
+<block wx:elif="{{onTime}}">
 	<view class="container container-gray">
 		<form bindsubmit='submit' bindtap="save">
 			<view class="group">
@@ -108,7 +115,7 @@
 		</form>
 	</view>
 </block>
-
+<!-- 超过截止日期页面 -->
 <block wx:else>
 	<view class='view-text'>
 		<view class='container2'>

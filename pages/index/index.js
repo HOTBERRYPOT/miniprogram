@@ -8,6 +8,7 @@ Page({
     isAdministrator: false, //是否是管理员
     enrolled: false, //是否已注册
     onTime: true, //是否在报名时间
+
     //报名者
     Name: '',
     Class: '',
@@ -66,6 +67,9 @@ Page({
               isAdministrator: true,
             })
           } else {
+            wx.setNavigationBarTitle({
+              title: '报名信息',
+            })
             db.collection('candidates').where({
               _openid: res.result._openid
             }).get({
@@ -83,6 +87,7 @@ Page({
     })
   },
 
+  //获取保存信息
   setSaveData: function () {
     var that = this
     wx.cloud.callFunction({ //获取用户openid
@@ -112,6 +117,7 @@ Page({
       })
     })
   },
+
   /*——————————————————————————————————————————————————————————————————————————————————————————————————————*/
   //报名者
   isOnTime: function () {
@@ -227,7 +233,9 @@ Page({
 
   submit: function (data) {
     if (data.detail.target.dataset.type == '提交') {
+      this.appsave(data)
       this.appsubmit(data)
+      this.onLoad()
     } else if (data.detail.target.dataset.type == '保存') {
       this.appsave(data)
     }
@@ -269,6 +277,9 @@ Page({
       wx.showToast({
         title: '提交成功！请耐心等待录取信息',
         icon: 'success'
+      })
+      wx.redirectTo({
+        url: "pages/index/index",
       })
     }
   },
