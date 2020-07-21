@@ -30,8 +30,7 @@
 						<view class="input-item">
 							<text class="input-item-label">姓名</text>
 							<view class="input-item-content">
-								<input type="text" name='Name' bindinput="inputName" placeholder="请输入姓名" value='{{Name}}'
-								></input>
+								<input type="text" name='Name' bindinput="inputName" placeholder="请输入姓名" value='{{Name}}'></input>
 							</view>
 						</view>
 						<view class="input-item">
