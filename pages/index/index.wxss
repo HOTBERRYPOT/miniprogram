@@ -367,7 +367,6 @@ radio-group label.checked:before {
 
 .img-upload .img-add {
 	border: 1rpx dashed #ddd;
-	background: url(../../images/add.png) no-repeat 50% 50% / 70% auto;
 }
 
 .img-upload .img-item image {

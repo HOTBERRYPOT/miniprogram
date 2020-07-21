@@ -279,7 +279,7 @@ Page({
         icon: 'success'
       })
       wx.redirectTo({
-        url: "pages/index/index",
+        url: "/pages/index/index",
       })
     }
   },
