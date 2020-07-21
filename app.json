@@ -28,7 +28,7 @@
         "selectedIconPath": "images/tabbar/activity1.png"
       },
       {
-        "text": "管理",
+        "text": "我的",
         "pagePath": "pages/mine/mine",
         "iconPath": "images/tabbar/mine.png",
         "selectedIconPath": "images/tabbar/mine1.png"

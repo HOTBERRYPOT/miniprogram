@@ -36,9 +36,9 @@ Page({
   onLoad: function () {
     this.isAdministrator() //判断是否为管理员
     this.isOnTime()
+    this.fetchData()
     this.fetchServiceData()
     this.fetchFilterData()
-    this.fetchData()
 
   },
 
@@ -74,7 +74,7 @@ Page({
   /*——————————————————————————————————————————————————————————————————————————————————————————————————————*/
   //报名者
   isOnTime: function () {
-    if (new Date('2019-12-31').getTime() < new Date().getTime()){
+    if (new Date('2020-12-31').getTime() < new Date().getTime()){
       this.setData({
         onTime : false
       })
@@ -231,9 +231,9 @@ appsubmit: function (data) {
     })
   }
 },
-appsubmit: function (data) {
+appsave: function (data) {
   console.log(data.detail.value)
-  db.collection(temp_save).where({
+  db.collection('temp_save').where({
     _openid: '',
   }).get({
     success: function (res) {
