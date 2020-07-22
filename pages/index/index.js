@@ -67,9 +67,6 @@ Page({
               isAdministrator: true,
             })
           } else {
-            wx.setNavigationBarTitle({
-              title: '报名信息',
-            })
             db.collection('candidates').where({
               _openid: res.result._openid
             }).get({
@@ -77,6 +74,9 @@ Page({
                 if (d.data.length) { //是否查找成功
                   that.setData({
                     enrolled: true,
+                  })
+                  wx.setNavigationBarTitle({
+                    title: '报名信息',
                   })
                 }
               }
@@ -260,9 +260,8 @@ Page({
       });
       db.collection("candidates").add({
         data: {
-          // _openid:userInfo._openid,
           姓名: this.data.Name,
-          班级: this.Class,
+          班级: this.data.Class,
           性别: this.data.sexarr[this.data.sexindex],
           出生日期: this.data.Birthday,
           手机号: this.data.Phone,
@@ -278,14 +277,10 @@ Page({
         title: '提交成功！请耐心等待录取信息',
         icon: 'success'
       })
-      wx.redirectTo({
-        url: "/pages/index/index",
-      })
     }
   },
   //暂时保存
   appsave: function (data) {
-    console.log(data.detail.value)
     var that = this
     wx.cloud.callFunction({ //获取用户openid
       name: 'login',
@@ -348,7 +343,6 @@ Page({
     const page = this.data.page
     db.collection('candidates').get({
       success: function (res) {
-        console.log(res.data[0]['姓名'])
         for (var i = 0; i < res.data.length; i++) {
           newlist.push({
             "id": i,

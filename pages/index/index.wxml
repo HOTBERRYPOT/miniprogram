@@ -106,7 +106,7 @@
 			<!-- <form bindsubmit='res'> -->
 			<view class="row">
 				<view class="btn-save">
-					<button form-type='submit' data-type='保存' class="btn-block btn-orange" bindtap="save">保存</button>
+					<button form-type='submit' data-type='保存' class="btn-block btn-orange">保存</button>
 				</view>
 				<view class="btn-submit">
 					<button form-type='submit' data-type='提交' type="primary" class="btn-block btn-orange">提交</button>
