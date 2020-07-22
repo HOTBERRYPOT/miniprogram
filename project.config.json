@@ -14,7 +14,8 @@
 		"autoAudits": false,
 		"coverView": true,
 		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false
+		"scopeDataCheck": false,
+		"checkSiteMap":false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.4",

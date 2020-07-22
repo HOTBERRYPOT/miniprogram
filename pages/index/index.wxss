@@ -313,7 +313,7 @@ radio-group label.checked:before {
 .gototop {
 	width: 70rpx;
 	height: 70rpx;
-	background: url(../../images/up.png) no-repeat 50% 50% / 100% auto;
+	/* background: url(../../images/up.png) no-repeat 50% 50% / 100% auto; */
 	position: fixed;
 	bottom: 20rpx;
 	right: 20rpx;
@@ -367,6 +367,7 @@ radio-group label.checked:before {
 
 .img-upload .img-add {
 	border: 1rpx dashed #ddd;
+	/* background: url(../../images/add.png) no-repeat 50% 50% / 70% auto; */
 }
 
 .img-upload .img-item image {

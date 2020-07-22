@@ -1,0 +1,10 @@
+<!--pages/candidate-info/candidate-info.wxml-->
+<block>
+	<view>姓名：{{Name}}</view>
+	<view>性别：{{sex}}</view>
+  <view>出生日期：{{Birthday}}</view>
+	<view>手机号：{{Phone}}</view>
+  <view>特长：{{Speciality}}</view>
+	<view>第一志愿：{{job1}}</view>
+	<view>第二志愿：{{job2}}</view>
+</block>

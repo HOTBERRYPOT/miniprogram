@@ -4,7 +4,7 @@
 	<view class="container">
 		<scroll-view class="container-body" scroll-y="true" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50" bindscrolltolower="scrollLoading">
 			<view class="admin-list">
-				<navigator class="admin-item" wx:for="{{adminlist}}" wx:key="{{item.id}}" url="这里是对应学生的页面url">
+				<navigator class="admin-item" wx:for="{{adminlist}}" wx:key="{{item.id}}" url="../candidate-info/candidate-info?Name={{item.name}}">
 					<view class="admin-text">
 						<view class="admin-tite">{{item.name}}</view>
 						<view class="admin-tags">
@@ -20,11 +20,11 @@
 </block>
 <!-- 已报名页面 -->
 <block wx:elif="{{enrolled}}">
-<view>姓名：{{Name}}</view>
-<view>性别：{{sexarr[sexindex]}}</view>
-<view>手机：{{Phone}}</view>
-<view>第一志愿：{{job1arr[job1index]}}</view>
-<view>第二志愿：{{job2arr[job2index]}}</view>
+	<view>姓名：{{Name}}</view>
+	<view>性别：{{sexarr[sexindex]}}</view>
+	<view>手机：{{Phone}}</view>
+	<view>第一志愿：{{job1arr[job1index]}}</view>
+	<view>第二志愿：{{job2arr[job2index]}}</view>
 </block>
 <!-- 报名表页面 -->
 <block wx:elif="{{onTime}}">

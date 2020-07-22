@@ -2,7 +2,7 @@
 
 const db = wx.cloud.database()
 const app = getApp()
-
+const newlist = []
 Page({
   data: {
     isAdministrator: false, //是否是管理员
@@ -345,16 +345,21 @@ Page({
     this.setData({
       page: this.data.page + 1
     })
-    const page = this.data.page;
-    const newlist = [];
-    for (var i = (page - 1) * perpage; i < page * perpage; i++) {
-      newlist.push({
-        "id": i + 1,
-        "name": "这里是第" + (i + 1) + "位同学的姓名",
-        "tag1": "这里是第一志愿",
-        "tag2": "这里是第二志愿",
-      })
-    }
+    const page = this.data.page
+    db.collection('candidates').get({
+      success: function (res) {
+        console.log(res.data[0]['姓名'])
+        for (var i = 0; i < res.data.length; i++) {
+          newlist.push({
+            "id": i,
+            "name": res.data[i]['姓名'],
+            "tag1": res.data[i]['第一志愿'],
+            "tag2": res.data[i]['第二志愿'],
+          })
+        }
+      }
+    })
+
     setTimeout(() => {
       _this.setData({
         adminlist: _this.data.adminlist.concat(newlist)
