@@ -233,16 +233,15 @@ Page({
 
   submit: function (data) {
     if (data.detail.target.dataset.type == '提交') {
-      this.appsave(data)
       this.appsubmit(data)
-      this.onLoad()
     } else if (data.detail.target.dataset.type == '保存') {
       this.appsave(data)
     }
   },
   appsubmit: function (data) {
     //提交前检验
-    var notValidative = data.detail.value.Name == '' || data.detail.value.Class == '' || data.detail.value.Birthday == '' || data.detail.value.Phone == '' || data.detail.value.Speciality == '' || data.detail.value.Experience == '' || this.data.sexindex == 0 || this.data.job1index == 0 || this.data.job2index == 0
+    var that = this
+    var notValidative = data.detail.value.Name == '' || data.detail.value.Class == '' || data.detail.value.Birthday == '' || data.detail.value.Phone == '' || data.detail.value.Speciality == '' || data.detail.value.Experience == '' || data.detail.value.Reason == '' || this.data.sexindex == 0 || this.data.job1index == 0 || this.data.job2index == 0
     if (notValidative) {
       wx.showToast({
         title: '请完整填写报名表！',
@@ -258,6 +257,20 @@ Page({
         Experience: data.detail.value.Experience,
         Reason: data.detail.value.Reason
       });
+      db.collection("candidates_for_admin").add({
+        data: {
+          Name: data.detail.value.Name,
+          Class: data.detail.value.Class,
+          Birthday: data.detail.value.Birthday,
+          Phone: data.detail.value.Phone,
+          Speciality: data.detail.value.Speciality,
+          Experience: data.detail.value.Experience,
+          Reason: data.detail.value.Reason,
+          sexindex: that.data.sexindex,
+          job1index: that.data.job1index,
+          job2index: that.data.job2index
+        }
+      })
       db.collection("candidates").add({
         data: {
           姓名: this.data.Name,
@@ -277,6 +290,8 @@ Page({
         title: '提交成功！请耐心等待录取信息',
         icon: 'success'
       })
+      this.appsave(data)
+      this.onLoad()
     }
   },
   //暂时保存
@@ -331,7 +346,7 @@ Page({
   /*————————————————————————————————————————————————————————————————————————————————————————————*/
   //管理员
   fetchServiceData: function () { //获取学生列表
-    let _this = this;
+    let that = this;
     wx.showToast({
       title: '加载中',
       icon: 'loading'
@@ -341,22 +356,22 @@ Page({
       page: this.data.page + 1
     })
     const page = this.data.page
-    db.collection('candidates').get({
+    db.collection('candidates_for_admin').get({
       success: function (res) {
         for (var i = 0; i < res.data.length; i++) {
           newlist.push({
             "id": i,
-            "name": res.data[i]['姓名'],
-            "tag1": res.data[i]['第一志愿'],
-            "tag2": res.data[i]['第二志愿'],
+            "name": res.data[i]['Name'],
+            "tag1": that.data.job1arr[res.data[i]['job1index']],
+            "tag2": that.data.job1arr[res.data[i]['job2index']],
           })
         }
       }
     })
 
     setTimeout(() => {
-      _this.setData({
-        adminlist: _this.data.adminlist.concat(newlist)
+      that.setData({
+        adminlist: that.data.adminlist.concat(newlist)
       })
     }, 1500)
   },

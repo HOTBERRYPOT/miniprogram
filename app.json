@@ -10,8 +10,7 @@
     "pages/editUserInfo/name/name",
     "pages/editUserInfo/studentID/studentID",
     "pages/editUserInfo/phone/phone",
-    "pages/editUserInfo/location/location",
-    "pages/party-blog/blog-index/blog-index"
+    "pages/editUserInfo/location/location"
   ],
   "tabBar": {
     "list": [

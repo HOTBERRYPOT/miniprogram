@@ -36,7 +36,7 @@ Page({
   },
   ini: function () {
     var that = this
-    db.collection('temp_save').where({
+    db.collection('candidates_for_admin').where({
       Name: this.data.Name
     }).get({
       success: function (e) {
