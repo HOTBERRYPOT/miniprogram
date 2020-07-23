@@ -19,7 +19,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      t0:app.globalData.t0,
+      t1:app.globalData.t1,
+      t2:app.globalData.t2,
+      count:app.globalData.count,
+    })
   },
 
   /**

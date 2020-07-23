@@ -1,0 +1,22 @@
+<!--pages/Justsoso/Justsoso.wxml-->
+    <swiper class="index-swiper" indicator-dots="{{false}}"
+      autoplay="{{false}}" circular="{{true}}" >
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <image src="/images/swiper/21.png"></image> 
+        </swiper-item> 
+      </block>
+    </swiper>  
+       <view class='freeart' >
+     <view class="tagtitle">活动简介</view>
+     <view class="introduction">
+     <text >
+     在这个信息时代，信息广泛渗透到科技、文化、经济各个学科，因此快速、有效、经济地获取与自身需求相关的有用信息，已经成为当代大学生的一项不可或缺的基本技能。
+
+为了使大学生了解信息发展的最新动态，培养对信息知识的兴趣，在计算机学院团委的策划下与图书馆通力合作，并在校学工办的指导和社区学院的助力支持下，推出信息搜搜大赛，让大家在趣味性的比赛中学会如何有效地检索所需的信息与资源。（是面向全校学生，大家都可以参加哦！）</text>
+     </view>
+     
+   </view>
+
+
+

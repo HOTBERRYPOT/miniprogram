@@ -1,7 +1,8 @@
+<!--pages/fake-activity/fake-activity.wxml-->
 
 <view class="index">
-<image class="background" src="./6.png"> </image>
     <!-- 分类导航 -->
+    <image class="background" src="./6.png"> </image>
     <swiper class="index-swiper" indicator-dots="{{indicatorDots}}"
       autoplay="{{false}}" circular="{{true}}" >
       <block wx:for="{{background}}" wx:key="*this">
@@ -22,9 +23,9 @@
     </swiper>  
 <view class="index-tab">
     <button  class="{{current=='links'?'active':''}}" data-current='links'
-    bindtap="nothing">部门简介</button>
+    bindtap="handleCurrent">部门简介</button>
     <button class="{{current=='activity'?'active':''}}" data-current='activity'
-    bindtap="handleCurrent">特色活动</button>
+    bindtap="nothing">特色活动</button>
     </view>
     <view class="nav-block wrap">
     <view wx:for="{{navItems}}">
@@ -34,10 +35,4 @@
       </view>
    </view>
   </view>
- 
-
-
-
-
 </view>
-

@@ -1,42 +1,42 @@
-// pages/party/party.js
+// pages/fake-activity/fake-activity.js
 var app = getApp()
 Page({
   data: {
     background: [
       '',
     ],
-    current:'links',
+    current:'activity',
     navItems: [
       {
-        name: '文体部',
-        url: 'party-join',
+        name: '迎新晚会',
+        url: 'yingxin',
       },
       {
-        name: '权益中心',
-        url: 'party-activity',
+        name: 'Just搜搜信息检索大赛',
+        url: 'Justsoso',
         isSplot: true
       },
       {
-        name: '人力资源部',
+        name: '校友小讲堂	',
         url: 'activity-find'
       },
       {
-        name: '外联部',
+        name: 'C语言辅导',
         url: 'party-blog',
         isSplot: true
       },
       {
-        name: '志管部',
+        name: '“职来职往”',
         url: 'party-volun',
         isSplot: true
       },
       {
-        name: '信息部',
+        name: '3v3篮球赛',
         url: 'party-info',
         isSplot: true
       },
       {
-        name: '学术部',
+        name: '东区之夜',
         url: 'party-getin',
         isSplot: true
       }
@@ -76,8 +76,8 @@ Page({
     console.log('onLoad')
   },
   handleCurrent( ){
-    wx.navigateTo({
-      url: '../fake-activity/fake-activity'
+    wx.switchTab({
+      url: '../activity/activity'
     })
   }
 

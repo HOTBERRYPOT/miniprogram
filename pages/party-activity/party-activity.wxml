@@ -1,24 +1,35 @@
 
-<view class='item container'>
-   <text class="title">权益中心</text>
+
+    <image class="background" src="./6.png"> </image>
+ <swiper class="index-swiper" indicator-dots="{{indicatorDots}}"
+      autoplay="{{false}}" circular="{{true}}" >
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <image src="/images/swiper/quanyi1.jpg"></image> 
+        </swiper-item> 
+      </block>
+            <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <image src="./quanyi.png"></image> 
+        </swiper-item> 
+      </block>
+    </swiper>  
 
    <view class='freeart' >
      <view class="tagtitle">部门职能</view>
-      <textarea placeholder="说说你们平时都需要干些啥，做了啥活动" maxlength="200" placeholder-class="placeholder" class='multi_in' bindinput='freeContentInput' value="{{business}}" />
+     <textarea class='business'>
+     权益中心本着全心全意服务于广大同学的宗旨，架起学校与学生之间的沟通桥梁，尽力为同学解决及解答生活和学习中遇到的困难，维护广大同学的正当权益。</textarea>
    </view>
 
    <view class='contentart'>
      <view class="tagtitle">所需人才</view>
-     <textarea placeholder="输入招新所需人才的基本概况" maxlength="-1" placeholder-class="placeholder" class='multi_in' bindinput='contentInput' value="{{person}}" />
+     <textarea class='business'>在权益中心，你可以关注任何想关注的方面，你也可以提出任何想法，只要它能为同门们提供便利，争取福利。衣食住行，校内校外，你可以推送任何东西，只要它对同学们有用。</textarea>
    </view>
 
   <view class='contentart'>
      <view class="tagtitle">对新生的话</view>
-     <textarea placeholder="说点好听的哄骗下大家吧" maxlength="-1" placeholder-class="placeholder" class='multi_in' bindinput='contentInput' value="{{word}}" />
+     <textarea class="business">我相信，在权益中心的日子里，你不只可以提升工作能力（相信我也不会有很多工作的 xixi）、责任感等等等等，更重要的是，大家一起相处的时候你能收获真挚的友谊（大家都很 nice 的哦）。权益中心欢迎你！</textarea>
    </view>
 
-   <view class='btns'>
-    <button class='submit' hover-class="press_sub" bindtap="submit">保存发布</button>
-  </view>
-</view>
+
 

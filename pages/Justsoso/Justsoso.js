@@ -1,19 +1,18 @@
-// pages/party-activity/party-activity.js
+// pages/Justsoso/Justsoso.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
- 
-   background: [
-    '',
-  ],
-  indicatorDots: true,
-  vertical: false,
-  autoplay: false,
-  interval: 2000,
-  duration: 500
+    background: [
+      '',
+    ],
+    indicatorDots: true,
+    vertical: false,
+    autoplay: false,
+    interval: 2000,
+    duration: 500
   },
 
   /**
@@ -27,9 +26,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-   this.setData({
-     
-   })
+
   },
 
   /**

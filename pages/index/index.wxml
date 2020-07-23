@@ -4,7 +4,7 @@
 	<view class="container">
 		<scroll-view class="container-body" scroll-y="true" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50" bindscrolltolower="scrollLoading">
 			<view class="admin-list">
-				<navigator class="admin-item" wx:for="{{adminlist}}" wx:key="{{item.id}}" url="../candidate-info/candidate-info?Name={{item.name}}">
+				<navigator class="admin-item" wx:for="{{adminlist}}" wx:key="id" url="../candidate-info/candidate-info?Name={{item.name}}">
 					<view class="admin-text">
 						<view class="admin-tite">{{item.name}}</view>
 						<view class="admin-tags">
@@ -20,11 +20,63 @@
 </block>
 <!-- 已报名页面 -->
 <block wx:elif="{{enrolled}}">
-	<view>姓名：{{Name}}</view>
-	<view>性别：{{sexarr[sexindex]}}</view>
-	<view>手机：{{Phone}}</view>
-	<view>第一志愿：{{job1arr[job1index]}}</view>
-	<view>第二志愿：{{job2arr[job2index]}}</view>
+	<!--index.wxml-->
+<view class="container container-gray">
+<form bindsubmit = 'submit'>
+	<view class="group">
+		<view class="group-header">基本信息</view>
+		<view class="group-body">
+			<view class="input-list">
+				<view class="input-item">
+					<text class="input-item-label">姓名</text>
+					<text class="input-item-label">{{Name}}</text>
+				</view>
+        <view class="input-item">
+					<text class="input-item-label">性别</text>
+					<text class="input-item-label">{{sexarr[sexindex]}}</text>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">班级</text>
+					<text class="input-item-label">{{Class}}</text>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">出生年月</text>
+					<text class="input-item-label">{{Birthday}}</text>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">手机号</text>
+					<text class="input-item-label">{{Phone}}</text>
+				</view>
+				<view class="input-item input-item-full">
+					<text class="input-item-label">特长</text>
+					<textarea name = "Speciality" placeholder="可输入50字" maxlength="50" value = '{{Speciality}}' disabled="true"></textarea>
+				</view>
+			</view>
+		</view>
+		<view class="group-header">应聘部门</view>
+		<view class="group-body">
+			<view class="input-list">
+				<view class="input-item">
+					<text class="input-item-label">第一志愿</text>
+					<text class="input-item-label">{{job1arr[job1index]}}</text>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">第二志愿</text>
+					<text class="input-item-label">{{job2arr[job2index]}}</text>
+				</view>
+			</view>
+		</view>
+		<view class="group-header">个人经历（社会实践/所获荣誉）</view>
+		<view class="group-body">
+			<textarea name = "Experience" placeholder="请输入个人经历（社会实践/所获荣誉)" value = '{{Experience}}' disabled="true"></textarea>
+		</view>
+		<view class="group-header">申请理由</view>
+		<view class="group-body">
+			<textarea name = "Reason" placeholder="请输入申请理由" value = '{{Reason}}' disabled="true"></textarea>
+		</view> 
+	</view>
+</form>
+</view>
 </block>
 <!-- 报名表页面 -->
 <block wx:elif="{{onTime}}">
@@ -71,7 +123,7 @@
 						<view class="group-body">
 							<view class="img-upload">
 								<view class="img-add" bindtap="chooseImage"></view>
-								<view class="img-item" bindlongtap="editImage" wx:for="{{uploadimgs}}" wx:key="{{index}}">
+								<view class="img-item" bindlongtap="editImage" wx:for="{{uploadimgs}}" wx:key="index">
 									<icon type="clear" size="20" color="red" style="display:{{editable?'block':'none'}}" bindtap="deleteImg" data-index="{{index}}" />
 									<image src="{{item}}" mode="aspectFill"></image>
 								</view>
