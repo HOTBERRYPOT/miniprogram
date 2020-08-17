@@ -1,22 +1,22 @@
 
 <view class="index">
-<image class="background" src="./6.png"> </image>
+<image class="background" src="cloud://berrypot-2pevh.6265-berrypot-2pevh-1301906682/images/background.png"> </image>
     <!-- 分类导航 -->
     <swiper class="index-swiper" indicator-dots="{{indicatorDots}}"
       autoplay="{{false}}" circular="{{true}}" >
       <block wx:for="{{background}}" wx:key="*this">
         <swiper-item>
-          <image src="/images/swiper/1.jpeg"></image> 
+          <image src="cloud://berrypot-2pevh.6265-berrypot-2pevh-1301906682/images/swiper/1.JPEG"></image> 
         </swiper-item> 
       </block>
             <block wx:for="{{background}}" wx:key="*this">
         <swiper-item>
-          <image src="/images/swiper/2.jpg"></image> 
+          <image src="cloud://berrypot-2pevh.6265-berrypot-2pevh-1301906682/images/swiper/2.JPG"></image> 
         </swiper-item> 
       </block>
        <block wx:for="{{background}}" wx:key="*this">
         <swiper-item>
-          <image src="/images/swiper/3.jpg"></image> 
+          <image src="cloud://berrypot-2pevh.6265-berrypot-2pevh-1301906682/images/swiper/3.jpg"></image> 
         </swiper-item> 
       </block>
     </swiper>  

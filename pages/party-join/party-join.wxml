@@ -5,12 +5,12 @@
       autoplay="{{false}}" circular="{{true}}" >
       <block wx:for="{{background}}" wx:key="*this">
         <swiper-item>
-          <image src="/images/swiper/wenti1.jpg"></image> 
+          <image src="cloud://berrypot-2pevh.6265-berrypot-2pevh-1301906682/images/swiper/wenti1.JPG"></image> 
         </swiper-item> 
       </block>
             <block wx:for="{{background}}" wx:key="*this">
         <swiper-item>
-          <image src="/images/swiper/wenti.png"></image> 
+          <image src="cloud://berrypot-2pevh.6265-berrypot-2pevh-1301906682/images/swiper/wenti.png"></image> 
         </swiper-item> 
       </block>
     </swiper>  

@@ -3,7 +3,7 @@
       autoplay="{{false}}" circular="{{true}}" >
       <block wx:for="{{background}}" wx:key="*this">
         <swiper-item>
-          <image src="/images/swiper/21.png"></image> 
+          <image src="cloud://berrypot-2pevh.6265-berrypot-2pevh-1301906682/images/swiper/21.PNG"></image> 
         </swiper-item> 
       </block>
     </swiper>  
